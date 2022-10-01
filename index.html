@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.checkboxContainer {
+  background-color: #dddddd;
+  border-radius: 3px;
+  margin:3px;
+  padding: 2px;
+}
+
+#CheckBoxes {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0;
+}
+
+.inputABM {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#FormABM {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: none;
+}
+
+#selectTipoContainer {
+    display: none;
+}
+
+</style>
+</head>
+<body>
+    <div id="FormDatos">
+        <h1>Formulario de Datos</h1>
+        <label>
+            Filtrar por:
+            <select id="selectFiltro">
+                <option value="Todos">Todos</option>
+                <option value="Heroes">Heroes</option>
+                <option value="Villanos">Villanos</option>
+            </select>
+        </label>
+        <div id="CheckBoxes"></div>
+        <table id="TablaDatos"></table>
+        <button id="buttonAgregar">Agregar</button>
+    </div>
+    <div id="FormABM">
+        <form>
+            <label>Nombre</label>
+            <input id="nombreInput" type="text" class="inputABM" placeholder="Santiago">
+        
+            <label>Apellido</label>
+            <input id="apellidoInput" type="text" class="inputABM" placeholder="Lopez Cane">
+
+            <label>Edad</label>
+            <input id="edadInput" type="number" class="inputABM" placeholder="24">
+
+            <input type="hidden" id="idPersona">
+
+            <div id="selectTipoContainer">
+                <label>Tipo</label>
+                <select id="selectTipo" class="inputABM">
+                    <option value="Heroe">Heroe</option>
+                    <option value="Villano">Villano</option>
+                </select>
+            </div>
+            <div id="camposExtra"></div>
+            <div id="botonesABM"></div>
+            
+        </form>
+      </div>
+
+</body>
+
+<script src="./validar.js" type="text/javascript"></script>
+<script src="./Entidades.js" type="text/javascript"></script>
+<script src="./ManipularDom.js" type="text/javascript"></script>
+</html>
